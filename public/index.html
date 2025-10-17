@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Shooter Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pixel Shooter Online</h1>
+    <canvas id="gameCanvas"></canvas>
+        <div id="gameOverScreen" class="hidden">
+            <h2 id="winnerText"></h2>
+            <button id="playAgainButton">Chơi Lại</button>
+        </div>
+        <div id="touchControls" class="hidden">
+        <div class="d-pad">
+            <button id="leftButton">◀</button>
+            <button id="rightButton">▶</button>
+        </div>
+        <div class="action-pad">
+            <button id="shootButton">BẮN</button>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

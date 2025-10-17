@@ -1,0 +1,89 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+canvas {
+    background-color: #000;
+    border: 2px solid #555;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#gameOverScreen {
+    position: absolute;
+    /* Căn giữa màn hình */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 30px 50px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+#playAgainButton {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#touchControls {
+    /* Đặt cố định ở cuối màn hình */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Sắp xếp các nút */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px;
+    box-sizing: border-box;
+    /* Không cho người dùng chọn chữ trên nút */
+    user-select: none;
+    -webkit-user-select: none; /* Cho Safari */
+}
+
+#touchControls button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Nút tròn */
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.2); /* Bán trong suốt */
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    
+    /* Loại bỏ hiệu ứng highlight khi chạm trên mobile */
+    -webkit-tap-highlight-color: transparent;
+}
+
+#shootButton {
+    background-color: rgba(255, 65, 54, 0.4); /* Màu đỏ cho nút bắn */
+    font-size: 1.2em;
+}
+
+.d-pad, .action-pad {
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các nút */
+}
